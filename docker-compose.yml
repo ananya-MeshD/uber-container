@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  uber-container:
+    build: .
+
+    ports:
+      - "80:80" # For Nginx (if you're using it)
+
+      - "5000:5000" # Map external port 5000 to internal port 5000 (Service 1)
+
+      - "5001:5001" # Map external port 5001 to internal port 5001 (Service 2)
+
+      - "2323:2323" # For debugpy, making it accessible from the host
+
+    volumes:
+      - .:/app
