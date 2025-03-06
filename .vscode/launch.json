@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+
+  "configurations": [
+    {
+      "name": "Attach to Service 1",
+
+      "type": "debugpy",
+
+      "request": "attach",
+
+      "connect": {
+        "host": "localhost",
+
+        "port": 2323
+      },
+
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/service1",
+
+          "remoteRoot": "/app/service1"
+        }
+      ]
+    },
+
+    {
+      "name": "Attach to Service 2",
+
+      "type": "debugpy",
+
+      "request": "attach",
+
+      "connect": {
+        "host": "localhost",
+
+        "port": 2525
+      },
+
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/service2",
+
+          "remoteRoot": "/app/service2"
+        }
+      ]
+    }
+  ]
+}
