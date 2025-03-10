@@ -22,9 +22,4 @@ def home():
     return "Hello from service 1" + formatted_time 
 
 if __name__ == "__main__": 
-    if REMOTE_DEBUG: 
-        print("Waiting for debugger to attach...", flush=True) 
-        debugpy.wait_for_client()   
-        print("Debugger attached!", flush=True) 
-  
     app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False) 
